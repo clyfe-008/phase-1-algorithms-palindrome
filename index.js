@@ -1,4 +1,7 @@
-function isPalindrome(word) {
+function isPalindrome(string) {
+  string = string.toLowerCase()
+  return string === string.split('').reverse().join('');
+  
   // Write your algorithm here
 }
 
@@ -15,11 +18,13 @@ if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
-
-  console.log("");
+  console.log("Expecting:true")
+  console.log("=>",isPalindrome("abba"));
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+  console.log("Expecting:false")
+  console.log("=>",isPalindrome("ab"))
 }
 
 module.exports = isPalindrome;
